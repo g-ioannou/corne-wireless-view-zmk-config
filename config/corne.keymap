@@ -24,11 +24,11 @@
 &kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J  &kp L  &kp U          &kp U    &kp SEMICOLON  &kp BSPC
 &kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H  &kp N  &kp E          &kp I    &kp O          &kp RSHFT
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K  &kp M  &kp COMMA      &kp DOT  &kp FSLH       &kp ESC
-                         &kp LGUI  &kp LEFT_ALT  &kp SPACE    &mo 1  &lt lower_layer ENT   &kp LC(SLASH)
+                         &kp LGUI  &kp LEFT_ALT  &kp SPACE    &mo lower_layer  &mt raise_layer ENT   &kp LC(SLASH)
             >;
         };
 
-        lower_layer {
+        lower_layer: lower_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
             // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
@@ -44,7 +44,7 @@
             >;
         };
 
-        raise_layer {
+        raise_layer: raise_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 |  F10| VOL_UP |
             // |      |     |     |     |     |  F11|   |  F12|     |     |     |     | VOL_DO |
