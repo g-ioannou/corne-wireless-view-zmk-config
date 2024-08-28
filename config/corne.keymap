@@ -1,17 +1,45 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
+    Helpful repo: https://github.com/bmijanovich/zmk-config/blob/main/config/glove80.keymap
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define L_BASE        0
+#define L_NUM_AND_SYM 1
+#define L_FN_AND_KB   2
+
+#define TAPPING_TERM         200
+#define TAPPING_TERM_PER_KEY
+#define TAP_DANCE_TIMEOUT_MS 200
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
+    behaviors {
+        td_slash: tap_dance_fslash_bslash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAP_DANCE_TIMEOUT_MS>;
+            bindings = <&kp FSLH>, <&kp BSLH>;
+                
+        };
+
+        td_caps: tap_dance_capsw_capsl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAP_DANCE_TIMEOUT_MS>;
+            bindings = <&caps_word>, <&kp CAPS>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        Default {
+        default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
             // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  N   |  E  |  I  |  O  |  '   |
@@ -20,10 +48,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J            &kp L    &kp U          &kp U    &kp SEMICOLON  &kp BSPC
-&kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H            &kp N    &kp E          &kp I    &kp O          &kp RSHFT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K            &kp M    &kp COMMA      &kp DOT  &kp FSLH       &kp ESC
-                         &kp LGUI  &kp LEFT_ALT  &kp SPACE    &mo lower_layer  &lt 2 B  &kp LC(SLASH)
+&kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J            &kp L    &kp U          &kp Y    &kp SEMICOLON      &kp BSPC
+&kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H            &kp N    &kp E          &kp I    &kp O              &kp RSHFT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K            &kp M    &kp COMMA      &kp DOT  &td_slash          &kp ESC
+                         &kp LGUI  &kp LEFT_ALT  &kp SPACE    &mo L_NUM_AND_SYM      &lt L_FN_AND_KB RET     &kp LC(SLASH)
             >;
         };
 
@@ -36,9 +64,9 @@
 
             display-name = "Num & Sym";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR    &kp PERCENT         &kp CARET          &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5              &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
-&trans  &kp GRAVE        &kp UP_ARROW  &kp DOWN_ARROW  &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL      &kp LEFT_ARROW  &kp RIGHT             &kp SQT                &trans
+&td_caps  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR    &kp PERCENT         &kp CARET          &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5              &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
+&trans    &kp GRAVE        &kp UP_ARROW  &kp DOWN_ARROW  &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL      &kp LEFT_ARROW  &kp RIGHT             &kp SQT                &trans
                                        &trans          &trans        &trans              &trans             &trans         &trans
             >;
         };
