@@ -21,8 +21,8 @@
             display-name = "Base";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J  &kp L  &kp U          &kp U    &kp SEMICOLON  &kp BSPC
-&kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H  &kp J  &kp E          &kp I    &kp O          &kp RSHFT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N  &kp M  &kp COMMA      &kp DOT  &kp FSLH       &kp ESC
+&kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H  &kp N  &kp E          &kp I    &kp O          &kp RSHFT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K  &kp M  &kp COMMA      &kp DOT  &kp FSLH       &kp ESC
                          &kp LGUI  &kp LEFT_ALT  &kp SPACE    &mo 1  &mo 2  &kp LC(SLASH)
             >;
         };
@@ -54,7 +54,7 @@
             bindings = <
 &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3       &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9   &kp F10  &kp C_VOLUME_UP
 &kp C_BRIGHTNESS_DEC  &none   &none          &none        &kp PRINTSCREEN  &kp F11       &kp F12     &none   &none     &none    &none    &kp C_VOLUME_DOWN
-&sys_reset            &none   &kp PAGE_DOWN  &kp PAGE_UP  &none            &kp DELETE    &kp INSERT  &none   &kp HOME  &kp END  &none    &kp K_MUTE
+&bootloader           &none   &kp PAGE_DOWN  &kp PAGE_UP  &none            &kp DELETE    &kp INSERT  &none   &kp HOME  &kp END  &none    &kp K_MUTE
                                              &none        &none            &none         &none       &none   &none
             >;
         };
