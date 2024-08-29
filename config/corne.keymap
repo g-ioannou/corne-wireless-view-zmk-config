@@ -46,7 +46,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             global-quick-tap;
-            bindings = <&kp LGUI>, <&kp SPACE>;
+            bindings = <&kp>, <&kp>;
         };
 
 
