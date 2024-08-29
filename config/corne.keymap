@@ -38,11 +38,10 @@
         };
 
         mod_tap: custom_mod_tap {
-            compatible = "zmk, behavior-hold-tap";
-            label = "LGUI_SPACE_TAP";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             global-quick-tap;
