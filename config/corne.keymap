@@ -13,8 +13,14 @@
 #define TAPPING_TERM_PER_KEY
 #define TAP_DANCE_TIMEOUT_MS 200
 
+#define MT_TAPPING_TERM 400
+
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
+};
+
+&mt {
+    tapping-term-ms = <MT_TAPPING_TERM>
 };
 
 / {
