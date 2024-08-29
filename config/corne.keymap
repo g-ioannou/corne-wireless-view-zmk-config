@@ -13,15 +13,12 @@
 #define TAPPING_TERM_PER_KEY
 #define TAP_DANCE_TIMEOUT_MS 200
 
-#define MT_TAPPING_TERM 400
+#define MT_TAPPING_TERM 180
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
 
-&mt {
-    tapping-term-ms = <MT_TAPPING_TERM>
-};
 
 / {
     behaviors {
@@ -38,6 +35,18 @@
             #binding-cells = <0>;
             tapping-term-ms = <TAP_DANCE_TIMEOUT_MS>;
             bindings = <&caps_word>, <&kp CAPS>;
+        };
+
+        mod_tap: custom_mod_tap {
+            compatible = "zmk, behavior-hold-tap";
+            label = "LGUI_SPACE_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp LGUI>, <&kp SPACE>;
         };
 
 
@@ -58,7 +67,7 @@
 &kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J            &kp L    &kp U          &kp Y    &kp SEMICOLON      &kp BSPC
 &kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H            &kp N    &kp E          &kp I    &kp O              &kp RSHFT
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K            &kp M    &kp COMMA      &kp DOT  &td_slash          &kp ESC
-                         &kp LGUI  &kp LEFT_ALT  &mt LGUI SPACE    &mo L_NUM_AND_SYM      &lt L_FN_AND_KB RET     &kp LC(BSLH)
+                         &kp LGUI  &kp LEFT_ALT  &mod_tap LGUI SPACE    &mo L_NUM_AND_SYM      &lt L_FN_AND_KB RET     &kp LC(BSLH)
             >;
         };
 
