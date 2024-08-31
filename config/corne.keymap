@@ -57,27 +57,29 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  N   |  E  |  I  |  O  |  '   |
-            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | LOWER or ENTER  | ALT |
+           //  BASE       | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** |      **COL 6**      |
+           // |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:-------------------:|
+           // | **ROW 1** |    TAB    |     Q     |     W     |     F     |     P     |          G          |
+           // | **ROW 2** |   LSHFT   |     A     |     R     |     S     |     T     |          D          |
+           // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |          B          |
+           // | **THUMB** |           |           |           |    MEH    |    LALT   | TAP:SPACE HOLD:LGUI |
 
             display-name = "Base";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J            &kp L    &kp U          &kp Y    &kp SEMICOLON      &kp BSPC
 &kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H            &kp N    &kp E          &kp I    &kp O              &kp RSHFT
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K            &kp M    &kp COMMA      &kp DOT  &td_slash          &kp ESC
-                         &kp MEH   &kp LEFT_ALT  &mod_tap LGUI SPACE           &lt L_NUM_AND_SYM RET      &lt L_FN_AND_KB LC(BSLH)     &kp HYPER
+                         &kp MEH   &kp LEFT_ALT  &mod_tap LGUI SPACE           &lt L_NUM_AND_SYM RET    &lt L_FN_AND_KB LC(BSLH)     &kp HYPER
             >;
         };
 
         lower_layer: lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-            // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-            // |      |  `  |UP   |DOWN |  -  |  [  |   |  ]  |  =  |LEFT |RHGT |  /  |      |
-            //                    |     |     |     |   |     |     |     |
+       //  NUM & SYM  |     **COL 1**    | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |
+       // |:---------:|:----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+       // | **ROW 1** | T:CAPSW TT:CAPSL |     @     |     #     |     $     |     %     |     G     |
+       // | **ROW 2** |                  |     1     |     2     |     3     |     4     |     5     |
+       // | **ROW 3** |                  |     `     |     UP    |    DOWN   |     -     |     [     |
+       // | **THUMB** |                  |           |           |           |           |           |
 
             display-name = "Num & Sym";
             bindings = <
@@ -89,17 +91,18 @@
         };
 
         raise_layer: raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |      |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 |  F10| VOL_UP |
-            // |      |     |     |     |     |  F11|   |  F12|     |     |     |     | VOL_DO |
-            // |      |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" | VOL_MU |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+         //    FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |
+         // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+         // | **ROW 1** | BRIGHTNESS + |     F1    |     F2    |     F3    |     F4    |     F5    |
+         // | **ROW 2** | BRIGHTNESS - |           |           |           |           |    DEL    |
+         // | **ROW 3** |    PRT SCR   |           |   PG UP   |  PG DOWN  |           |           |
+         // | **THUMB** |              |           |           |           |           |           |
 
             display-name = "Fn & Kb";
             bindings = <
 &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3       &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9   &kp F10  &kp C_VOLUME_UP
-&kp C_BRIGHTNESS_DEC  &none   &none          &none        &kp PRINTSCREEN  &kp F11       &kp F12     &none   &none     &none    &none    &kp C_VOLUME_DOWN
-&none                 &none   &kp PAGE_DOWN  &kp PAGE_UP  &none            &kp DELETE    &kp INSERT  &none   &kp HOME  &kp END  &none    &kp K_MUTE
+&kp C_BRIGHTNESS_DEC  &none   &none          &none        &kp DELETE       &kp F11       &kp F12     &none   &none     &INSERT  &none    &kp C_VOLUME_DOWN
+&PRINTSCREEN          &none   &kp PAGE_UP  &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END  &none    &kp K_MUTE
                                              &none        &none            &none         &none       &none   &none
             >;
         };
