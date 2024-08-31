@@ -57,12 +57,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-           //  BASE       | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** |      **COL 6**      |
-           // |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:-------------------:|
-           // | **ROW 1** |    TAB    |     Q     |     W     |     F     |     P     |          G          |
-           // | **ROW 2** |   LSHFT   |     A     |     R     |     S     |     T     |          D          |
-           // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |          B          |
-           // | **THUMB** |           |           |           |    MEH    |    LALT   | TAP:SPACE HOLD:LGUI |
+           //  BASE       | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** |  **COL 6**   |    |     **COL 1**     |      **COL 2**      | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
+           // |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:------------:|    |:-----------------:|:-------------------:|:---------:|:---------:|:---------:|:---------:|-----------|
+           // | **ROW 1** |    TAB    |     Q     |     W     |     F     |     P     |       G      |    |         J         |          L          |     U     |     Y     |     ;     | BACKSPACE | **ROW 1** |
+           // | **ROW 2** |   LSHFT   |     A     |     R     |     S     |     T     |       D      |    |         H         |          N          |     E     |     I     |     O     |   RSHFT   | **ROW 2** |
+           // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |       B      |    |         K         |          M          |     ,     |     .     |T:/   TT:\ |    ESC    | **ROW 3** |
+           // | **THUMB** |           |           |           |    MEH    |    LALT   |T:SPACE H:LGUI|    | H:LAYER 1 T:ENTER | H:LAYER 2 T: CTRL+\ |    HYPER  |           |           |           | **THUMB** |
 
             display-name = "Base";
             bindings = <
@@ -74,36 +74,36 @@
         };
 
         lower_layer: lower_layer {
-       //  NUM & SYM  |     **COL 1**    | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |
-       // |:---------:|:----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-       // | **ROW 1** | T:CAPSW TT:CAPSL |     @     |     #     |     $     |     %     |     G     |
-       // | **ROW 2** |                  |     1     |     2     |     3     |     4     |     5     |
-       // | **ROW 3** |                  |     `     |     UP    |    DOWN   |     -     |     [     |
-       // | **THUMB** |                  |           |           |           |           |           |
+       //  NUM & SYM  |     **COL 1**    | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
+       // |:---------:|:----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
+       // | **ROW 1** | T:CAPSW TT:CAPSL |     @     |     #     |     $     |     %     |     G     |    |     ^     |     &     |     *     |     (     |     )     |           | **ROW 1** |
+       // | **ROW 2** |                  |     1     |     2     |     3     |     4     |     5     |    |     6     |     7     |     8     |     9     |     O     |           | **ROW 2** |
+       // | **ROW 3** |                  |     `     |     UP    |    DOWN   |     -     |     [     |    |     ]     |     =     |    LEFT   |   RIGHT   |     '     |           | **ROW 3** |
+       // | **THUMB** |                  |           |           |           |           |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Num & Sym";
             bindings = <
-&td_caps  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR    &kp PERCENT         &kp CARET          &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5              &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
-&trans    &kp GRAVE        &kp UP_ARROW  &kp DOWN_ARROW  &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL      &kp LEFT_ARROW  &kp RIGHT             &kp SQT                &trans
-                                       &trans          &trans        &trans              &trans             &trans         &trans
+                &td_caps  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR    &kp PERCENT         &kp CARET          &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+                &trans    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5              &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
+                &trans    &kp GRAVE        &kp UP_ARROW  &kp DOWN_ARROW  &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL      &kp LEFT_ARROW  &kp RIGHT             &kp SQT                &trans
+                                           &trans          &trans        &trans        &trans              &trans             &trans
             >;
         };
 
         raise_layer: raise_layer {
-         //    FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |
-         // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-         // | **ROW 1** | BRIGHTNESS + |     F1    |     F2    |     F3    |     F4    |     F5    |
-         // | **ROW 2** | BRIGHTNESS - |           |           |           |           |    DEL    |
-         // | **ROW 3** |    PRT SCR   |           |   PG UP   |  PG DOWN  |           |           |
-         // | **THUMB** |              |           |           |           |           |           |
+         //  FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
+         // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
+         // | **ROW 1** | BRIGHTNESS + |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    |   VOL UP  | **ROW 1** |
+         // | **ROW 2** | BRIGHTNESS - |           |           |           |           |    DEL    |    |    F12    |     7     |           |   INSERT  |           |  VOL DOWN | **ROW 2** |
+         // | **ROW 3** |    PRT SCR   |           |   PG UP   |  PG DOWN  |           |           |    |           |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
+         // | **THUMB** |              |           |           |           |           |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Fn & Kb";
             bindings = <
-&kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3       &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9   &kp F10  &kp C_VOLUME_UP
-&kp C_BRIGHTNESS_DEC  &none   &none          &none        &kp DELETE       &kp F11       &kp F12     &none   &none     &INSERT  &none    &kp C_VOLUME_DOWN
-&PRINTSCREEN          &none   &kp PAGE_UP  &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END  &none    &kp K_MUTE
-                                             &none        &none            &none         &none       &none   &none
+                &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9   &kp F10  &kp C_VOLUME_UP
+                &kp C_BRIGHTNESS_DEC  &none   &none          &none          &kp DELETE       &kp F11       &kp F12     &none   &none     &INSERT  &none    &kp C_VOLUME_DOWN
+                &PRINTSCREEN          &none   &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END  &none    &kp K_MUTE
+                                             &trans         &trans           &trans        &none       &none   &none
             >;
         };
     };
