@@ -50,6 +50,15 @@
             bindings = <&kp>, <&kp>;
         };
 
+        layer_tap: custom_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&lt>, <&kp>;
+        };
 
     };
 
@@ -66,10 +75,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F     &kp P         &kp G        &kp J            &kp L    &kp U          &kp Y    &kp SEMICOLON      &kp BSPC
-&kp LSHFT  &kp A  &kp R  &kp S     &kp T         &kp D        &kp H            &kp N    &kp E          &kp I    &kp O              &kp RSHFT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp K            &kp M    &kp COMMA      &kp DOT  &td_slash          &kp ESC
-                         &kp MEH   &kp LEFT_ALT  &mod_tap LGUI SPACE           &lt L_NUM_AND_SYM RET    &lt L_FN_AND_KB LC(BSLH)     &kp HYPER
+                &kp TAB    &kp Q  &kp W  &kp F     &kp P     &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
+                &kp LSHFT  &kp A  &kp R  &kp S     &kp T     &kp D            &kp H                    &kp N                          &kp E                       &kp I      &kp O              &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
+                                                   &kp MEH   &kp LEFT_ALT     &mod_tap LGUI SPACE      &layer_tap L_NUM_AND_SYM RET   &lt L_FN_AND_KB LC(BSLH)    &kp HYPER
             >;
         };
 
@@ -100,10 +109,10 @@
 
             display-name = "Fn & Kb";
             bindings = <
-                &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9   &kp F10  &kp C_VOLUME_UP
-                &kp C_BRIGHTNESS_DEC  &none   &none          &none          &kp DELETE       &kp F11       &kp F12     &none   &none     &INSERT  &none    &kp C_VOLUME_DOWN
-                &PRINTSCREEN          &none   &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END  &none    &kp K_MUTE
-                                             &trans         &trans           &trans        &none       &none   &none
+                &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9      &kp F10  &kp C_VOLUME_UP
+                &kp C_BRIGHTNESS_DEC  &none   &none          &none          &kp DELETE       &kp F11       &kp F12     &none   &none     &kp INSERT  &none    &kp C_VOLUME_DOWN
+                &kp PRINTSCREEN       &none   &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END     &none    &kp K_MUTE
+                                                             &trans         &trans           &trans        &none       &none   &none
             >;
         };
     };
