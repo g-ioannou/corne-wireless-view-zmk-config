@@ -16,7 +16,7 @@
 #define MT_TAPPING_TERM 180
 
 #define HYPER LC(LA(LS(LGUI)))
-#define MEH   LC(LA(LS))
+#define MEH   LC(LA(LEFT_SHIFT))
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
