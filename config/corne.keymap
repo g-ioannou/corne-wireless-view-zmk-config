@@ -26,6 +26,7 @@
 &lt {
    retro-tap;
 };
+
 / {
     behaviors {
         td_slash: tap_dance_fslash_bslash {
@@ -71,7 +72,7 @@
                 &kp TAB    &kp Q  &kp W  &kp F     &kp P     &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
                 &kp LSHFT  &kp A  &kp R  &kp S     &kp T     &kp D            &kp H                    &kp N                          &kp E                       &kp I      &kp O              &kp RSHFT
                 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
-                                                   &kp MEH   &kp LEFT_ALT     &mod_tap LGUI SPACE      &layer_tap L_NUM_AND_SYM RET   &lt L_FN_AND_KB LC(BSLH)    &kp HYPER
+                                                   &kp MEH   &kp LEFT_ALT     &mod_tap LGUI SPACE      &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp HYPER
             >;
         };
 
