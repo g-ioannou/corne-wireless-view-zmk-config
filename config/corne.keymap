@@ -93,17 +93,17 @@
         raise_layer: raise_layer {
          //  FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
          // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
-         // | **ROW 1** | BRIGHTNESS + |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    |   VOL UP  | **ROW 1** |
-         // | **ROW 2** | BRIGHTNESS - | clear BT  | BT next   | BT prev   |           |    DEL    |    |    F12    |     7     |           |   INSERT  |           |  VOL DOWN | **ROW 2** |
-         // | **ROW 3** |    PRT SCR   |           |   PG UP   |  PG DOWN  |           |           |    |           |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
-         // | **THUMB** |              |           |           |           |           |           |    |           |           |           |           |           |           | **THUMB** |
+         // | **ROW 1** | BRIGHTNESS + | clear BT  | BT next   | BT prev   |           |           |    | BT_SEL 0  | BT_SEL 1  | BT_SEL 2  | BT_SEL 3  | BT_SEL 4  |   VOL UP  | **ROW 1** |
+         // | **ROW 2** | BRIGHTNESS - |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    | VOL DOWN  | **ROW 2** |
+         // | **ROW 3** |    PRT SCR   |    DEL    |   PG UP   |  PG DOWN  |  INSERT   |    F11    |    |    F12    |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
+         // | **THUMB** |              |           |           | GLOBE     |           |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Fn & Kb";
             bindings = <
-                &kp C_BRIGHTNESS_INC &bt BT_CLR &bt BT_NXT  &bt BT_PRV    &none      &none             &none   &none    &none    &none     &none   &kp C_VOLUME_UP
-                &kp C_BRIGHTNESS_DEC &kp F1     &kp F2      &kp F3        &kp F4     &kp F5            &kp F6  &kp F7    &kp F8   &kp F9   &kp F10 &kp C_VOLUME_DOWN
-                &kp PRINTSCREEN      &kp DELETE &kp PAGE_UP &kp PAGE_DOWN &kp INSERT &kp F11           &kp F12 &none     &kp HOME &kp END  &none   &kp K_MUTE
-                                                            &kp GLOBE     &trans     &out OUT_TOG      &none   &none     &none
+                &kp C_BRIGHTNESS_INC &bt BT_CLR &bt BT_NXT  &bt BT_PRV    &none      &none             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &BT_SEL 4 &kp C_VOLUME_UP
+                &kp C_BRIGHTNESS_DEC &kp F1     &kp F2      &kp F3        &kp F4     &kp F5            &kp F6       &kp F7       &kp F8       &kp F9       &kp F10   &kp C_VOLUME_DOWN
+                &kp PRINTSCREEN      &kp DELETE &kp PAGE_UP &kp PAGE_DOWN &kp INSERT &kp F11           &kp F12      &none        &kp HOME &kp END          &none     &kp K_MUTE
+                                                            &kp GLOBE     &trans     &out OUT_TOG      &none        &none        &none
             >;
         };
     };
