@@ -4,6 +4,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define L_BASE        0
@@ -93,15 +94,15 @@
          //  FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
          // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
          // | **ROW 1** | BRIGHTNESS + |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    |   VOL UP  | **ROW 1** |
-         // | **ROW 2** | BRIGHTNESS - |           |           |           |           |    DEL    |    |    F12    |     7     |           |   INSERT  |           |  VOL DOWN | **ROW 2** |
+         // | **ROW 2** | BRIGHTNESS - | clear BT  | BT next   | BT prev   |           |    DEL    |    |    F12    |     7     |           |   INSERT  |           |  VOL DOWN | **ROW 2** |
          // | **ROW 3** |    PRT SCR   |           |   PG UP   |  PG DOWN  |           |           |    |           |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
          // | **THUMB** |              |           |           |           |           |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Fn & Kb";
             bindings = <
-                &kp C_BRIGHTNESS_INC  &kp F1  &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9      &kp F10  &kp C_VOLUME_UP
-                &kp C_BRIGHTNESS_DEC  &none   &none          &none          &kp DELETE       &kp F11       &kp F12     &none   &none     &kp INSERT  &none    &kp C_VOLUME_DOWN
-                &kp PRINTSCREEN       &none   &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END     &none    &kp K_MUTE
+                &kp C_BRIGHTNESS_INC  &kp F1        &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9      &kp F10  &kp C_VOLUME_UP
+                &kp C_BRIGHTNESS_DEC  &bt BT_CLR    &bt BT_NXT     &bt BT_PRV     &kp DELETE       &kp F11       &kp F12     &none   &none     &kp INSERT  &none    &kp C_VOLUME_DOWN
+                &kp PRINTSCREEN       &none         &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END     &none    &kp K_MUTE
                                                              &trans         &trans           &out OUT_TOG  &none       &none   &none
             >;
         };
