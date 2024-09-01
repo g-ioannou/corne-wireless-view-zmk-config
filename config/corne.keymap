@@ -28,8 +28,9 @@
 };
 
 &mt {
-    retro-tap;
-    flavor = "hold-preferred";
+    flavor = "tap-preferred";
+    quick-tap-ms = <TAPPING_TERM>;
+    require-prior-idle-ms = <200>; 
 };
 
 / {
