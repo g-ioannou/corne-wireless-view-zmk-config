@@ -100,10 +100,10 @@
 
             display-name = "Fn & Kb";
             bindings = <
-                &kp C_BRIGHTNESS_INC  &kp F1        &kp F2         &kp F3         &kp F4           &kp F5        &kp F6      &kp F7  &kp F8    &kp F9      &kp F10  &kp C_VOLUME_UP
-                &kp C_BRIGHTNESS_DEC  &bt BT_CLR    &bt BT_NXT     &bt BT_PRV     &kp DELETE       &kp F11       &kp F12     &none   &none     &kp INSERT  &none    &kp C_VOLUME_DOWN
-                &kp PRINTSCREEN       &none         &kp PAGE_UP    &kp PAGE_DOWN  &none            &none         &none       &none   &kp HOME  &kp END     &none    &kp K_MUTE
-                                                             &trans         &trans           &out OUT_TOG  &none       &none   &none
+                &kp C_BRIGHTNESS_INC &bt BT_CLR &bt BT_NXT  &bt BT_PRV    &none      &none             &none   &none    &none    &none     &none   &kp C_VOLUME_UP
+                &kp C_BRIGHTNESS_DEC &kp F1     &kp F2      &kp F3        &kp F4     &kp F5            &kp F6  &kp F7    &kp F8   &kp F9   &kp F10 &kp C_VOLUME_DOWN
+                &kp PRINTSCREEN      &kp DELETE &kp PAGE_UP &kp PAGE_DOWN &kp INSERT &kp F11           &kp F12 &none     &kp HOME &kp END  &none   &kp K_MUTE
+                                                            &kp GLOBE     &trans     &out OUT_TOG      &none   &none     &none
             >;
         };
     };
