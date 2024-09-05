@@ -70,15 +70,15 @@
         switch_to_linux: switch_to_linux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog L_LINUX>
-                     , <&bt BT_SEL 0>
+            bindings = <&bt BT_SEL 0>
+                      ,<&tog L_LINUX>
                      ;
         };
         switch_to_mac: switch_to_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog L_MAC>
-                     , <&bt BT_SEL 1>
+            bindings = <&bt BT_SEL 1>
+                     , <&tog L_MAC>
                      ;
         };
     };
