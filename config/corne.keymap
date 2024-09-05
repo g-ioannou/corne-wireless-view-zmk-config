@@ -98,7 +98,7 @@
             display-name = "Mac";
             bindings = <
                 &kp TAB    &kp Q  &kp W  &kp F     &kp P     &kp G                                                         &kp J &kp L &kp U     &kp Y                    &kp SEMICOLON &kp BSPC
-                &kp LSHFT  &hm LCTRL A  &hm LEFT_ALT R  &hm LGUI S     &kp T     &kp D                                     &kp H &kp N &kp E     &kp I                    &kp O         &kp RSHFT
+                &kp LSHFT  &kp A  &kp R  &kp S     &kp T     &kp D                                                         &kp H &kp N &kp E     &kp I                    &kp O         &kp RSHFT
                 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B                                                         &kp K &kp M &kp COMMA &kp DOT                  &td_slash     &kp ESC
                                                    &kp HYPER &kp LEFT_ALT     &mt LGUI SPACE                               &lt L_NUM_AND_SYM RET &lt L_FN_AND_KB LC(BSLH) &kp MEH
             >;
@@ -114,9 +114,9 @@
 
             display-name = "Linux";
             bindings = <
-                &kp TAB    &kp Q  &kp W  &kp F           &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
-                &kp LSHFT  &kp A   &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
-                &kp LCTRL  &kp Z  &kp X  &kp C           &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
+                &kp TAB    &kp Q  &kp W  &kp F  &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
+                &kp LSHFT  &kp A  &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
                                                          &kp HYPER   &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
             >;
         };
