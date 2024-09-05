@@ -67,11 +67,15 @@
 
     macros {
         switch_to_linux: switch_to_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&to L_LINUX>
                      , <&bl BT_SEL 1>
                      ;
         };
         switch_to_mac: switch_to_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&to L_MAC>
                      , <&bl BT_SEL 2>
                      ;
