@@ -8,10 +8,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define L_MAC         0
-#define L_NUM_AND_SYM 1
-#define L_FN_AND_KB   2
-#define L_BT          3
-#define L_LINUX       4
+#define L_LINUX       1
+#define L_NUM_AND_SYM 2
+#define L_FN_AND_KB   3
+#define L_BT          4
+
 
 #define TAPPING_TERM         200
 #define TAPPING_TERM_PER_KEY
@@ -103,6 +104,23 @@
             >;
         };
 
+        default_layer_linux: default_layer_linux {
+           //  BASE       | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** |  **COL 6**   |    |     **COL 1**     |      **COL 2**      | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
+           // |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:------------:|    |:-----------------:|:-------------------:|:---------:|:---------:|:---------:|:---------:|-----------|
+           // | **ROW 1** |    TAB    |     Q     |     W     |     F     |     P     |       G      |    |         J         |          L          |     U     |     Y     |     ;     | BACKSPACE | **ROW 1** |
+           // | **ROW 2** |   LSHFT   |     A     |     R     |     S     |     T     |       D      |    |         H         |          N          |     E     |     I     |     O     |   RSHFT   | **ROW 2** |
+           // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |       B      |    |         K         |          M          |     ,     |     .     |T:/   TT:\ |    ESC    | **ROW 3** |
+           // | **THUMB** |           |           |           |   HYGER   |    LALT   |T:SPACE H:LGUI|    | H:LAYER 1 T:ENTER | H:LAYER 2 T: CTRL+\ |    MEH    |           |           |           | **THUMB** |
+
+            display-name = "Linux";
+            bindings = <
+                &kp TAB    &kp Q  &kp W  &kp F           &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
+                &kp LSHFT  &kp A   &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C           &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
+                                                         &kp HYPER   &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
+            >;
+        };
+
         lower_layer: lower_layer {
        //  NUM & SYM  |     **COL 1**    | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
        // |:---------:|:----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
@@ -155,21 +173,6 @@
             >;
         };
 
-        default_layer_linux: default_layer_linux {
-           //  BASE       | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** |  **COL 6**   |    |     **COL 1**     |      **COL 2**      | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
-           // |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:------------:|    |:-----------------:|:-------------------:|:---------:|:---------:|:---------:|:---------:|-----------|
-           // | **ROW 1** |    TAB    |     Q     |     W     |     F     |     P     |       G      |    |         J         |          L          |     U     |     Y     |     ;     | BACKSPACE | **ROW 1** |
-           // | **ROW 2** |   LSHFT   |     A     |     R     |     S     |     T     |       D      |    |         H         |          N          |     E     |     I     |     O     |   RSHFT   | **ROW 2** |
-           // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |       B      |    |         K         |          M          |     ,     |     .     |T:/   TT:\ |    ESC    | **ROW 3** |
-           // | **THUMB** |           |           |           |   HYGER   |    LALT   |T:SPACE H:LGUI|    | H:LAYER 1 T:ENTER | H:LAYER 2 T: CTRL+\ |    MEH    |           |           |           | **THUMB** |
-
-            display-name = "Linux";
-            bindings = <
-                &kp TAB    &kp Q  &kp W  &kp F           &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
-                &kp LSHFT  &kp A   &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
-                &kp LCTRL  &kp Z  &kp X  &kp C           &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
-                                                         &kp HYPER   &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
-            >;
-        };
+        
     };
 };
