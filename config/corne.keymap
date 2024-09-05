@@ -70,14 +70,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to L_LINUX>
-                     , <&bl BT_SEL 1>
+                     , <&bt BT_SEL 4>
                      ;
         };
         switch_to_mac: switch_to_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to L_MAC>
-                     , <&bl BT_SEL 2>
+                     , <&bt BT_SEL 0>
                      ;
         };
     };
@@ -149,9 +149,9 @@
             display-name = "Bt & Mouse";
             bindings = <
                 &none &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &none        &none            &none             &switch_to_mac &none &none &none &none
-                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &switch_to_linux  &none &none &none &none &none
-                &none &none        &none        &none        &none        &none            &none             &none &none &none &none &none
-                                                &none        &none        &none            &none             &none &none
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &switch_to_linux  &none          &none &none &none &none
+                &none &none        &none        &none        &none        &none            &none             &none          &none &none &none &none
+                                                &none        &none        &none            &none             &none          &none
             >;
         };
 
@@ -163,10 +163,10 @@
            // | **ROW 3** |   LCTRL   |     Z     |     X     |     C     |     V     |       B      |    |         K         |          M          |     ,     |     .     |T:/   TT:\ |    ESC    | **ROW 3** |
            // | **THUMB** |           |           |           |   HYGER   |    LALT   |T:SPACE H:LGUI|    | H:LAYER 1 T:ENTER | H:LAYER 2 T: CTRL+\ |    MEH    |           |           |           | **THUMB** |
 
-            display-name = "Mac";
+            display-name = "Linux";
             bindings = <
                 &kp TAB    &kp Q  &kp W  &kp F           &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
-                &kp LSHFT  &kp A   &kp R  &kp S  &kp T            &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
+                &kp LSHFT  &kp A   &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
                 &kp LCTRL  &kp Z  &kp X  &kp C           &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
                                                          &kp HYPER   &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
             >;
