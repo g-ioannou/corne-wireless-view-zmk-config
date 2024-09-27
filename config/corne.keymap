@@ -100,10 +100,10 @@
 
             display-name = "Mac";
             bindings = <
-                &kp TAB    &kp Q  &kp W  &kp F     &kp P     &kp G                                                         &kp J &kp L &kp U     &kp Y                    &kp SEMICOLON &kp BSPC
-                &kp LSHFT  &kp A  &kp R  &kp S     &kp T     &kp D                                                         &kp H &kp N &kp E     &kp I                    &kp O         &kp RSHFT
-                &kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B                                                         &kp K &kp M &kp COMMA &kp DOT                  &td_slash     &kp ESC
-                                                   &kp HYPER &kp LEFT_ALT     &mt LGUI SPACE                               &lt L_NUM_AND_SYM RET &lt L_FN_AND_KB LC(BSLH) &kp MEH
+                &kp TAB    &kp Q  &kp W  &kp F  &kp P  &kp G    &kp J  &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+                &kp LSHFT  &kp A  &kp R  &kp S  &kp T  &kp D    &kp H  &kp N  &kp E      &kp I    &kp O          &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp K  &kp M  &kp COMMA  &kp DOT  &td_slash      &kp ESC
+                       &kp HYPER &kp LEFT_ALT &mt LGUI SPACE    &lt L_NUM_AND_SYM RET   &lt L_FN_AND_KB LC(BSLH)  &kp MEH
             >;
         };
 
@@ -117,10 +117,10 @@
 
             display-name = "NixOS";
             bindings = <
-                &kp TAB    &kp Q  &kp W  &kp F  &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
-                &kp LSHFT  &kp A  &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
-                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
-                                                         &kp LGUI  &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
+                &kp TAB    &kp Q  &kp W  &kp F  &kp P   &kp G    &kp J  &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+                &kp LSHFT  &kp A  &kp R  &kp S  &kp T   &kp D    &kp H  &kp N  &kp E      &kp I    &kp O          &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V   &kp B    &kp K  &kp M  &kp COMMA  &kp DOT  &td_slash      &kp ESC
+                      &kp LGUI  &kp LEFT_ALT  &mt LCTRL SPACE    &lt L_NUM_AND_SYM RET  &lt L_FN_AND_KB LC(BSLH)  &kp MEH
             >;
         };
 
@@ -134,10 +134,10 @@
 
             display-name = "Ubuntu";
             bindings = <
-                &kp TAB    &kp Q  &kp W  &kp F  &kp P       &kp G            &kp J                    &kp L                          &kp U                       &kp Y      &kp SEMICOLON      &kp BSPC
-                &kp LSHFT  &kp A  &kp R  &kp S  &kp T   &kp D                    &kp H                          &kp N                       &kp E      &kp I      &kp O              &kp RSHFT
-                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V       &kp B            &kp K                    &kp M                          &kp COMMA                   &kp DOT    &td_slash          &kp ESC
-                                                         &kp HYPER    &kp LEFT_ALT     &mt LCTRL SPACE          &lt L_NUM_AND_SYM RET          &lt L_FN_AND_KB LC(BSLH)    &kp MEH
+                &kp TAB    &kp Q  &kp W  &kp F  &kp P   &kp G    &kp J  &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+                &kp LSHFT  &kp A  &kp R  &kp S  &kp T   &kp D    &kp H  &kp N  &kp E      &kp I    &kp O          &kp RSHFT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V   &kp B    &kp K  &kp M  &kp COMMA  &kp DOT  &td_slash      &kp ESC
+                     &kp HYPER  &kp LEFT_ALT  &mt LCTRL SPACE    &lt L_NUM_AND_SYM RET  &lt L_FN_AND_KB LC(BSLH)  &kp MEH
             >;
         };
 
@@ -162,10 +162,10 @@
         raise_layer: raise_layer {
          //  FN         |   **COL 1**  | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |    | **COL 1** | **COL 2** | **COL 3** | **COL 4** | **COL 5** | **COL 6** |           | 
          // |:---------:|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|    |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|-----------|
-         // | **ROW 1** | BRIGHTNESS + | clear BT  | BT next   | BT prev   |           |           |    | BT_SEL 0  | BT_SEL 1  | BT_SEL 2  | BT_SEL 3  | BT_SEL 4  |   VOL UP  | **ROW 1** |
+         // | **ROW 1** | BRIGHTNESS + |           |           |           |           |           |    |           |           |           |           |           |   VOL UP  | **ROW 1** |
          // | **ROW 2** | BRIGHTNESS - |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    | VOL DOWN  | **ROW 2** |
          // | **ROW 3** |    PRT SCR   |    DEL    |   PG UP   |  PG DOWN  |  INSERT   |    F11    |    |    F12    |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
-         // | **THUMB** |              |           |           | GLOBE     |           |           |    |           |           |           |           |           |           | **THUMB** |
+         // | **THUMB** |              |           |           |   GLOBE   |    LBT    |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Fn & Kb";
             bindings = <
@@ -183,7 +183,7 @@
          // | **ROW 1** | BRIGHTNESS + | clear BT  | BT next   | BT prev   |           |           |    | BT_SEL 0  | BT_SEL 1  | BT_SEL 2  | BT_SEL 3  | BT_SEL 4  |   VOL UP  | **ROW 1** |
          // | **ROW 2** | BRIGHTNESS - |     F1    |     F2    |     F3    |     F4    |     F5    |    |     F6    |     F7    |     F8    |     F9    |    F10    | VOL DOWN  | **ROW 2** |
          // | **ROW 3** |    PRT SCR   |    DEL    |   PG UP   |  PG DOWN  |  INSERT   |    F11    |    |    F12    |           |    HOME   |    END    |           |  VOL MUTE | **ROW 3** |
-         // | **THUMB** |              |           |           | GLOBE     |           |           |    |           |           |           |           |           |           | **THUMB** |
+         // | **THUMB** |              |           |           |           |           |           |    |           |           |           |           |           |           | **THUMB** |
 
             display-name = "Bt & Mouse";
             bindings = <
