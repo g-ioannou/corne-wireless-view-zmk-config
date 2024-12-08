@@ -8,8 +8,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define L_MAC         0
-#define L_LINUX       1 # hyprland (LGUI leader)
-#define L_LINUX_2     2 # gnome (HYPER leader)
+#define L_LINUX       1 // hyprland (LGUI leader)
+#define L_LINUX_2     2 // gnome (HYPER leader)
 #define L_NUM_AND_SYM 3
 #define L_FN_AND_KB   4
 #define L_BT          5
