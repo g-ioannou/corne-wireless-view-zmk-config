@@ -41,7 +41,8 @@
 
 / {
     behaviors {
-        td_caps: tap_dance_capsw_capsl { // press once for caps word, twich for caps lock
+        // press once for caps word, twich for caps lock
+        td_caps: tap_dance_capsw_capsl { 
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_DANCE_TIMEOUT_MS>;
