@@ -96,10 +96,10 @@
         bt_layer: bt_layer {
             display-name = "Bt";
             bindings = <
-                &none          &none        &none        &none        &none        &none            &none &none    &none    &none &none &none
-                &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &BT_NEXT &BT_PREV &none &none &none
-                &bt BT_CLR_ALL &none        &none        &none        &none        &none            &none &none    &none    &none &none &none
-                                            &none        &none        &none                               &none &none &none
+                &none          &none        &none        &none        &none        &none            &none &none       &none       &none &none &none
+                &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &bt BT_NEXT &bt BT_PREV &none &none &none
+                &bt BT_CLR_ALL &none        &none        &none        &none        &none            &none &none       &none       &none &none &none
+                                            &none        &none        &none                               &none       &none       &none
             >;
         };
 
