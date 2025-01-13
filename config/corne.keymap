@@ -22,7 +22,7 @@
 #define MEH   LC(LA(LEFT_SHIFT))
 
 &caps_word {
-    continue-list = <UNDERSCORE LSHIFT RSHIFT MINUS>;
+    continue-list = <UNDERSCORE MINUS>;
 };
 
 &lt {
