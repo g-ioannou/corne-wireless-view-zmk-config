@@ -73,10 +73,10 @@
         lower_layer: lower_layer {
             display-name = "Num Sym";
             bindings = <
-                &trans    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR    &kp PERCENT         &kp CARET          &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-                &trans    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5              &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
-                &trans    &none            &kp UP_ARROW  &kp DOWN_ARROW  &kp MINUS     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp EQUAL      &kp LEFT_ARROW  &kp RIGHT             &trans                 &trans
-                                           &trans        &trans          &trans        &trans              &trans             &trans
+                &trans    &kp EXCLAMATION    &kp AT_SIGN         &kp HASH           &kp DOLLAR  &kp PERCENT             &kp CARET          &kp AMPERSAND     &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+                &trans    &hm LSHFT NUMBER_1 &hm LCTRL NUMBER_2  &hm LALT NUMBER_3  &hm LGUI    &kp NUMBER_5            &kp NUMBER_6       &hm RGUI NUMBER_7 &hm RALT NUMBER_8 &hm RCTRL NUMBER_9    &hm RSHFT NUMBER_0     &trans
+                &trans    &none              &kp UP_ARROW        &kp DOWN_ARROW     &kp MINUS   &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp EQUAL         &kp LEFT_ARROW    &kp RIGHT             &none                  &trans
+                                             &trans        &trans          &trans                                                    &trans   &trans   &trans
             >;
         };
 
