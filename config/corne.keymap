@@ -7,12 +7,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define L_MAC         0
-#define L_LINUX       1 // gnome (HYPER leader)
-#define L_LINUX_2     2 // hyperland (LGUI leader)
-#define L_NUM_AND_SYM 3
-#define L_FN_AND_KB   4
-#define L_BT          5
+#define L_NUM_AND_SYM 1
+#define L_FN_AND_KB   2
+#define L_BT          3
 
 
 #define TAPPING_TERM         200
