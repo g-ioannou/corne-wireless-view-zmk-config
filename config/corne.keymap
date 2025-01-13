@@ -22,7 +22,7 @@
 #define MEH   LC(LA(LEFT_SHIFT))
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS LSHFT RSHFT>;
 };
 
 &lt {
@@ -95,7 +95,7 @@
             display-name = "Bt";
             bindings = <
                 &none          &none        &none        &none        &none        &none            &none &none       &none       &none &none &none
-                &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &bt BT_NEXT &bt BT_PREV &none &none &none
+                &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &bt BT_NXT &bt BT_PRV &none &none &none
                 &bt BT_CLR_ALL &none        &none        &none        &none        &none            &none &none       &none       &none &none &none
                                             &none        &none        &none                               &none       &none       &none
             >;
