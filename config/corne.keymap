@@ -67,7 +67,7 @@
                 &td_caps   &hm LSHFT A  &hm LCTRL S  &hm LALT D   &hm LGUI F  &kp G        &kp H  &hm RGUI J  &hm RALT K  &hm RCTRL L  &hm RSHFT SEMICOLON  &kp SQT
                 &kp GRAVE  &kp Z        &kp X        &kp C        &kp V       &kp B        &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH             &kp BSLH
 
-                       &kp GLOBE   &kp ESC   &mt HYPER SPACE                                    &lt L_NUM_AND_SYM RET   &lt L_FN_AND_KB LC(BSLH)   &kp MEH
+                       &kp GLOBE   &kp ESC   &mt HYPER SPACE                                    &lt L_NUM_AND_SYM RET   &lt L_FN_AND_KB LC(SEMICOLON)   &kp MEH
             >;
         };
 
